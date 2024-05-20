@@ -1,0 +1,126 @@
+    <!-- Container Surat (start) -->
+    <div class="container">
+      <form method="POST" action="/surat-domain-1">
+        <!-- Surat Domain (start) -->
+        <header>Surat Permohonan Penggunaan Domain</header>
+        <div class="form first">
+          <div class="fields">
+            <div class="input-field">
+              <label>Nomor Surat :</label>
+              <input
+                type="text"
+                class="form-control"
+                required
+                maxlength="50"
+                placeholder="xxx/xxx/xxx"
+                id="noSurat1"
+                name="noSurat"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Jumlah Lampiran :</label>
+              <input 
+                type="text"
+                class="form-control"
+                placeholder="misal : 1"
+                name="lampiran"
+                oninput="restrictToNumbers(this)"
+                required>
+            </div>
+
+            <div class="input-field">
+              <label>Nama Desa :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Kembaran"
+                required
+                name="namaDesa"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kecamatan :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="kecamatan"
+                maxlength="20"
+                placeholder="misal : Purwokerto Timur"
+                required
+                name="namaKecamatan"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Tanggal :</label>
+              <input
+                type="date"
+                class="form-control"
+                id="tanggalInput"
+                required
+                name="tgl"
+                />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Pengurus Website :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaPengurusWeb"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Telp HP/WA :</label>
+              <input
+                type="text"
+                maxlength="20"
+                required
+                placeholder="0812xxxx"
+                oninput="restrictToNumbers(this)"
+                name="noHP"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kepala Desa :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="kadesInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaKades"
+              />
+            </div>
+          
+
+            <div class="input-field">
+              <label>Alamat :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="alamat"
+                required
+                placeholder="misal: Jl.Desa No.3 Selandaka Kecamatan Sumpuh Kabupaten Banyumas 53195"
+                name="alamat"
+              />
+            </div>
+          </div>
+
+          <button class="submitBtn">
+            <span class="btnText">Generate</span>
+          </button>
+        </div>
+      </form>
+    </div>

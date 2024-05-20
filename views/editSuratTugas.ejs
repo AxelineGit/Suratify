@@ -1,0 +1,221 @@
+    <!-- Container Surat (start) -->
+    <div class="container">
+      <form method="POST" action="/surat-tugas/?_method=PUT">
+        <input type="hidden" name="_id" value="<%= surat1._id %>">
+        <!-- Surat Tugas -->
+        <header>Edit Surat Perintah Tugas</header>
+        <div class="form fourth" id="surat-tugas">
+          <div class="fields">
+            <div class="input-field">
+              <label>Nomor Surat :</label>
+              <input
+                type="text"
+                required
+                maxlength="50"
+                placeholder="xxx/xxx/xxx"
+                name="noSurat"
+                value="<%= surat1.noSurat %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Dasar Penugasan :</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Alasan Ditugaskan"
+                name="dsrTugas"
+                value="<%= surat1.dsrTugas %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Desa :</label>
+              <input
+                type="text"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Kembaran"
+                required
+                name="namaDesa"
+                value="<%= surat1.namaDesa %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Tanggal Penetapan :</label>
+              <input
+                type="date"
+                id="tanggalInput"
+                placeholder="misal : 31"
+                maxlength="2"
+                required
+                name="tgl"
+                value="<%= surat1.tgl %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Yang Ditugaskan :</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaDitugaskan"
+                value="<%= surat1.namaDitugaskan %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>NIAP :</label>
+              <input
+                type="text"
+                maxlength="20"
+                required
+                placeholder="NIAP"
+                oninput="restrictToNumbers(this)"
+                name="niap"
+                value="<%= surat1.niap %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Jabatan :</label>
+              <input
+                type="text"
+                id="kadesInput"
+                required
+                maxlength="50"
+                placeholder="Jabatan"
+                name="jabatan"
+                value="<%= surat1.jabatan %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama :</label>
+              <input
+                type="text"
+                id="namaInput"
+                maxlength="50"
+                placeholder="Nama Orang Kedua Jika Ada"
+                name="namaDitugaskan2"
+                value="<%= surat1.namaDitugaskan2 %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>NIAP :</label>
+              <input
+                type="text"
+                maxlength="20"
+                required
+                placeholder="NIAP Orang Kedua Jika Ada"
+                oninput="restrictToNumbers(this)"
+                name="niap2"
+                value="<%= surat1.niap2 %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Jabatan :</label>
+              <input
+                type="text"
+                id="kadesInput"
+                required
+                maxlength="50"
+                placeholder="Jabatan Orang Kedua Jika Ada"
+                name="jabatan2"
+                value="<%= surat1.jabatan2 %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Untuk :</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Tujuan Diperintahkan"
+                name="tujuan"
+                value="<%= surat1.tujuan %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Untuk :</label>
+              <input
+                type="text"
+                id="namaInput"
+                maxlength="50"
+                placeholder="Tujuan Diperintahkan ke-2"
+                name="tujuan2"
+                value="<%= surat1.tujuan2 %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kepala Desa:</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaKades"
+                value="<%= surat1.namaKades %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kecamatan :</label>
+              <input
+                type="text"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Purwokerto Timur"
+                required
+                name="namaKecamatan"
+                value="<%= surat1.namaKecamatan%>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Alamat :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="alamat"
+                required
+                placeholder="misal: Jl.Desa No.3 Selandaka Kecamatan Sumpuh Kabupaten Banyumas 53195"
+                name="alamat"
+                value="<%= surat1.alamat %>"
+              />
+            </div>
+            <div class="input-field">
+              
+                 </div>
+          </div>
+
+          <div class="tombol">
+            <div class="edit">
+              <button class="submitBtn">
+                <span class="btnText">Edit</span>
+              </button>
+            </div>
+          </form>
+            <div class="upload">
+              <form action="/upload/surat-tugas" method="get">
+                <button class="uploadBtn" id="uploadBtn">
+                  <span class="btnText">Upload</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>

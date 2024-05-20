@@ -1,0 +1,118 @@
+    <!-- Container Surat (start) -->
+    <div class="container">
+        <form method="POST" action="/surat-domain?_method=PUT">
+          <input type="hidden" name="_id" value="<%= surat1._id %>">
+          <!-- Surat Domain (start) -->
+          <header>Edit Surat Permohonan Penggunaan Domain</header>
+          <div class="form first">
+            <div class="fields">
+              <div class="input-field">
+                <label>Nomor Surat :</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  required
+                  maxlength="50"
+                  placeholder="xxx/xxx/xxx"
+                  id="noSurat1"
+                  name="noSurat"
+                  value="<%= surat1.noSurat %>"
+                />
+              </div>
+              <div class="input-field">
+                <label>Jumlah Lampiran :</label>
+                <input 
+                  type="text"
+                  class="form-control"
+                  placeholder="misal : 1"
+                  name="lampiran"
+                  oninput="restrictToNumbers(this)"
+                  value="<%= surat1.lampiran %>"
+                  required>
+              </div>
+  
+              <div class="input-field">
+                <label>Nama Desa :</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="desaInput"
+                  maxlength="20"
+                  placeholder="misal : Kembaran"
+                  required
+                  name="namaDesa"
+                  value="<%= surat1.namaDesa %>"
+                />
+              </div>
+  
+              <div class="input-field">
+                <label>Tanggal :</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="tanggalInput"
+                  required
+                  name="tgl"
+                  value="<%= surat1.tgl %>"
+                  />
+              </div>
+  
+              <div class="input-field">
+                <label>Nama Pengurus Website :</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="namaInput"
+                  required
+                  maxlength="50"
+                  placeholder="Nama Lengkap"
+                  name="namaPengurusWeb"
+                  value="<%= surat1.namaPengurusWeb %>"
+                />
+              </div>
+  
+              <div class="input-field">
+                <label>Telp HP/WA :</label>
+                <input
+                  type="text"
+                  maxlength="20"
+                  required
+                  placeholder="0812xxxx"
+                  oninput="restrictToNumbers(this)"
+                  name="noHP"
+                  value="<%= surat1.noHP %>"
+                />
+              </div>
+  
+              <div class="input-field">
+                <label>Nama Kepala Desa :</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="kadesInput"
+                  required
+                  maxlength="50"
+                  placeholder="Nama Lengkap"
+                  name="namaKades"
+                  value="<%= surat1.namaKades %>"
+                />
+              </div>
+            </div>
+            <div class="tombol">
+              <div class="edit">
+                  <button class="submitBtn">
+                    <span class="btnText">Edit</span>
+                  </button>
+              </div>
+            </form>
+              <div class="upload">
+                <form action="/upload" method="get">
+                  <input type="hidden" name="id_surat" value="<%= surat1._id %>">
+                  <button class="uploadBtn" id="uploadBtn">
+                    <span class="btnText">Upload</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+      </div>

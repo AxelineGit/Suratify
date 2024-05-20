@@ -1,0 +1,107 @@
+    <!-- Container Surat (start) -->
+    <div class="container">
+      <form method="get" action="/buat-surat-domain">
+        <input type="hidden" name="noSurat" value="<%= surat1.noSurat %>">
+        <!-- Surat Domain (start) -->
+        <header>Surat Permohonan Penggunaan Domain</header>
+        <div class="form first">
+          <div class="fields">
+            <div class="input-field">
+              <label>Nomor Surat :</label>
+              <input
+                type="text"
+                class="form-control"
+                required
+                maxlength="50"
+                placeholder="xxx/xxx/xxx"
+                id="noSurat1"
+                name="noSurat"
+                value="<%= surat1.noSurat %>"
+              />
+            </div>
+            <div class="input-field">
+              <label>Jumlah Lampiran :</label>
+              <input 
+                type="text"
+                class="form-control"
+                placeholder="misal : 1"
+                name="lampiran"
+                oninput="restrictToNumbers(this)"
+                value="<%= surat1.lampiran %>"
+                required>
+            </div>
+
+            <div class="input-field">
+              <label>Nama Desa :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Kembaran"
+                required
+                name="namaDesa"
+                value="<%= surat1.namaDesa %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Tanggal :</label>
+              <input
+                type="date"
+                class="form-control"
+                id="tanggalInput"
+                required
+                name="tgl"
+                value="<%= surat1.tgl %>"
+                />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Pengurus Website :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaPengurusWeb"
+                value="<%= surat1.namaPengurusWeb %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Telp HP/WA :</label>
+              <input
+                type="text"
+                maxlength="20"
+                required
+                placeholder="0812xxxx"
+                oninput="restrictToNumbers(this)"
+                name="noHP"
+                value="<%= surat1.noHP %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kepala Desa :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="kadesInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaKades"
+                value="<%= surat1.namaKades %>"
+              />
+            </div>
+          </div>
+
+          <button class="submitBtn">
+            <span class="btnText">Download</span>
+          </button>
+        </div>
+      </form>
+    </div>

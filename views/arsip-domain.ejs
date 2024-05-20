@@ -1,0 +1,50 @@
+      <h2>Arsip Surat Domain</h2>
+      <% if (msg.length !== 0) { %>
+        <div class="alert">
+          <div class="alert-success" role="alert">
+            <%= msg %>
+          </div>
+        </div>
+      <% } %>
+      <table>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Tanggal Surat</th>
+          <th scope="col">Nomor Surat</th>
+          <th scope="col">Nama Pengurus Web</th>
+          <th scope="col">Nama Kepala Desa</th>
+          <th scope="col">Nama Desa</th>
+          <th scope="col">Aksi</th>
+        </tr>
+        <% surat1.forEach((surat1,i) => {i++ %>
+          <tr class="first">
+            <th scope="row"><%= i++ %></th>
+            <td><%= surat1.tgl %></td>
+            <td><%= surat1.noSurat %></td>
+            <td><%= surat1.namaPengurusWeb %></td>
+            <td><%= surat1.namaKades %></td>
+            <td><%= surat1.namaDesa %></td>
+            <td class="action">
+              <form action="/buat-surat-domain/<%= surat1._id %>" class="d-inline">
+                <input type="hidden" name="_id" value="<%= surat1._id %>">
+                <button type="submit" onclick="return confirm('Apakah anda ingin mendownload surat ini?');" class="btn-badge">
+                  <i class="fa-solid fa-download"></i>
+                </button>
+              </form>
+              <form action="/surat-domain/<%= surat1._id %>" class="d-inline">
+                <input type="hidden" name="_id" value="<%= surat1._id %>">
+                <button type="submit" onclick="return confirm('Apakah anda ingin mengedit surat ini?');" class="btn-badge">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+              </form>
+              <form action="/surat-domain?_method=DELETE" method="POST" class="d-inline">
+                <input type="hidden" name="_id" value="<%= surat1._id %>">
+                <button type="submit" onclick="return confirm('Apakah anda ingin menghapus?');" class="btn-badge">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+        <!-- Add more rows for additional letters as needed -->
+      </table>

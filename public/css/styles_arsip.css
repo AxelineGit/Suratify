@@ -1,0 +1,250 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav ul {
+  list-style: none;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+}
+
+.navbar .navbar-logo {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 2px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #000000;
+  font-family: "Nunito", sans-serif;
+  transition: 0.2s;
+}
+.navbar-logo a{
+  text-decoration: none;
+  color: black;
+}
+.navbar .navbar-logo:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+.navbar .navbar-extra a {
+  position: relative;
+  color: rgb(0, 0, 0);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a::before,
+.navbar .navbar-extra a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.navbar .navbar-extra a::before {
+  z-index: -1; /* Place it below the text */
+}
+
+.navbar .navbar-extra a:hover::before,
+.navbar .navbar-extra a:hover::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar .navbar-extra a svg {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+#hamburger-menu {
+  display: inline-block;
+  size: 100px;
+}
+.navbar .navbar-nav {
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  background-color: white;
+  width: 30rem;
+  height: 100vh;
+  transition: 0.3s;
+}
+/* Navbar Disamping (end) */
+
+.navbar .navbar-nav.active {
+  left: 0;
+}
+
+/* Navbar Text Disamping (start) */
+.navbar .navbar-nav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin: 1.5rem;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+  transition: 0.2s;
+}
+.navbar .navbar-nav a:hover {
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.navbar .navbar-nav a::after {
+  transform-origin: 0 0;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.6);
+}
+.container-nav {
+  background-color: rgba(242, 242, 242, 0.9);
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kiri {
+  display: flex;
+  align-items: center;
+}
+
+.banyumas img {
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.logo {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+header {
+  background-color: none;
+  color: #000000;
+  padding: 0px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 100px;
+}
+.container h2 {
+  padding: 20px;
+  text-align: center;
+  text-decoration: underline;
+}
+/* Styling the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  font-family: "Nunito", sans-serif;
+  background-color: #f2f2f2;
+}
+.nomor{
+  width: 20px;
+  text-align: center;
+}
+.aksi{
+  width: 100px;
+  text-align: center;
+}
+
+
+th,
+td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+.no {
+  text-align: center;
+}
+td i {
+  padding: 5px;
+  color: #aaa;
+}
+.action {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+.action i {
+  padding: 2px;
+  cursor: pointer;
+}
+.alert{
+  display: flex;
+  justify-content: center;
+}
+.alert-success{
+  display : block;
+  padding : 20px 10px;
+  border-radius : 10px;
+  border : solid 2px #badbcc;
+  width : 400px;
+  color:#0f5132;
+  background-color:#d1e7dd;
+  margin-bottom: 10px;
+  text-align: center;
+  align-items: center;
+}  
+.fa-download {
+  color : grey;
+}  
+.fa-pen {
+  color: #0096ff;
+}
+.fa-trash-can {
+  color: #ff3131;
+  border: none;
+}
+.btn-badge{
+  border: none;
+  background-color: white;
+}
+.d-inline{
+  margin-right: 5px;  
+}
+.fa-exclamation,
+.fa-user,
+.fa-handshake,
+.fa-chrome {
+  width: 20px;
+  padding-right: 10px;
+  text-align: center;
+}
+

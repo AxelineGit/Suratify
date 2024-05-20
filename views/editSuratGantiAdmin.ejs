@@ -1,0 +1,138 @@
+    <!-- Container Surat (start) -->
+    <div class="container">
+      <form method="POST" action="/surat-adm?_method=PUT">
+        <input type="hidden" name="_id" value="<%= surat1._id %>">
+        <!-- Surat Ganti Admn (start) -->
+        <header>Edit Surat Permohonan Penggantian Admin Website</header>
+        <div class="form third" id="surat-ganti-admin">
+          <div class="fields">
+            <div class="input-field">
+              <label>Nomor Surat :</label>
+              <input
+                type="text"
+                required
+                maxlength="50"
+                placeholder="xxx/xxx/xxx"
+                name="noSurat"
+                value="<%= surat1.noSurat %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Jumlah Lampiran :</label>
+              <input 
+                type="text"
+                placeholder="misal : 1"
+                name="lampiran"
+                value="<%= surat1.lampiran %>"
+                />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Desa :</label>
+              <input
+                type="text"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Kembaran"
+                required
+                name="namaDesa"
+                value="<%= surat1.namaDesa%>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Tanggal :</label>
+              <input
+                type="date"
+                id="tanggalInput"
+                placeholder="misal : 31"
+                maxlength="2"
+                required
+                name="tgl"
+                value="<%= surat1.tgl %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Admin :</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaAdmin"
+                value="<%= surat1.namaAdmin %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>NIK :</label>
+              <input
+                type="text"
+                maxlength="20"
+                required
+                placeholder="NIK"
+                oninput="restrictToNumbers(this)"
+                name="nik"
+                value="<%= surat1.nik %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Jabatan :</label>
+              <input
+                type="text"
+                id="kadesInput"
+                required
+                maxlength="50"
+                placeholder="Jabatan"
+                name="jabatan"
+                value="<%= surat1.jabatan %>"
+              />
+            </div>
+            <div class="input-field">
+              <label>NO HP :</label>
+              <input
+                type="text"
+                maxlength="20"
+                required
+                placeholder="0812xxxx"
+                oninput="restrictToNumbers(this)"
+                name="noHP"
+                value="<%= surat1.noHP %>"
+              />
+            </div>
+            <div class="input-field">
+              <label>Nama Kepala Desa :</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaKades"
+                value="<%= surat1.namaKades %>"
+              />
+            </div>
+            <div class="input-field"></div>
+          </div>
+
+          <div class="tombol">
+            <div class="edit">
+                <button class="submitBtn">
+                  <span class="btnText">Edit</span>
+                </button>
+            </div>
+          </form>
+            <div class="upload">
+              <form action="/upload/surat-admin" method="get">
+                <button class="uploadBtn" id="uploadBtn">
+                  <span class="btnText">Upload</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>

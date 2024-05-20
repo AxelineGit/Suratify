@@ -1,0 +1,417 @@
+:root {
+  --primary: rgb(255, 255, 255);
+  --bg: #4070f4;
+  --gray: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+/* PDF File (start) */
+
+
+.pdf-container {
+  background-color: black;
+  width: 500px;
+  margin-top: 40px;
+  flex: 1;
+}
+
+#suratDomain {
+  width: 100%;
+  height: 700px;
+  border: none;
+}
+
+/* PDF File (end) */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #e0e0e0;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Container A */
+
+.container {
+  position: relative;
+  width: 100%;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 15px;
+  background-color: #fff;
+  color: #000000;
+}
+
+.container header {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 70px;
+  margin-bottom: 10px;
+  font-family: "Nunito", sans-serif;
+}
+
+.container form {
+  position: relative;
+  margin-top: 16px;
+  min-height: 490px;
+  background-color: #fff;
+}
+
+.container form .title {
+  display: block;
+  margin: 6px 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.container form .fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+form .fields .input-field {
+  display: flex;
+  width: calc(100% / 3 - 15px);
+  flex-direction: column;
+  margin: 4px 0;
+}
+
+.input-field label {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.input-field input {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 35px;
+  margin: 8px 0;
+}
+
+.input-field select {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 35px;
+  margin: 8px 0;
+}
+
+.input-field input:focus,
+.input-field select:focus,
+.input-field input[type="date"]:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Container Z */
+
+/*  Navbar Diatas (start) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2%;
+  background-color: rgb(242, 242, 242);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar-nav {
+  flex-grow: 1;
+}
+/* Navbar Diatas (end) */
+/* Profile Picture start */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  transition: 0.2s;
+}
+
+.profile img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile span {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.profile:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s; /* Increase size by 10% */
+}
+
+/* Profile Picture end */
+/* Navbar Logo (start) */
+.navbar .navbar-logo {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 2px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #000000;
+  font-family: "Nunito", sans-serif;
+  transition: 0.2s;
+}
+.navbar .navbar-logo:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+
+.left-items {
+  display: flex;
+}
+.banyumas img {
+  display: flex;
+  margin-left: 10px;
+  height: 35px;
+  width: 35px;
+  top: 5px;
+}
+/* Navbar Logo (end) */
+
+/* Navbar Samping Text (start) */
+.navbar .navbar-nav a {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.2s;
+}
+/* Navbar Samping Text (end) */
+
+.navbar .navbar-nav a:hover {
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding: 0.2rem;
+  transform: scaleX(0);
+  transition: 0.1s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* Navbar Z */
+
+/* Tombol Submit (start) */
+
+.container form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: #4070f4;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+form button:hover {
+  background-color: #265df2;
+}
+
+/* Tombol Submit (end) */
+
+/* Hamburger Menu A*/
+
+/* Add this CSS code to your existing styles */
+
+.navbar .navbar-extra a {
+  position: relative;
+  color: rgb(0, 0, 0);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a::before,
+.navbar .navbar-extra a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.navbar .navbar-extra a::before {
+  z-index: -1; /* Place it below the text */
+}
+
+.navbar .navbar-extra a:hover::before,
+.navbar .navbar-extra a:hover::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar .navbar-extra a svg {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  transition: 0.2s;
+}
+
+#hamburger-menu {
+  display: inline-block;
+  size: 100px;
+}
+
+/* Navbar Disamping (start) */
+.navbar .navbar-nav {
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  background-color: white;
+  width: 30rem;
+  height: 100vh;
+  transition: 0.3s;
+}
+/* Navbar Disamping (end) */
+
+.navbar .navbar-nav.active {
+  left: 0;
+}
+
+/* Navbar Text Disamping (start) */
+.navbar .navbar-nav a {
+  color: black;
+  display: block;
+  margin: 1.5rem;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+}
+
+.navbar .navbar-nav a::after {
+  transform-origin: 0 0;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.6);
+}
+/* Navbar Text Disamping (end) */
+/* Hamburger Menu Z */
+
+/* Media Queries A */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 750px) {
+  .container form::-webkit-scrollbar {
+    display: none;
+  }
+  form .fields .input-field {
+    width: calc(100% / 2 - 15px);
+  }
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 550px) {
+  form .fields .input-field {
+    width: calc(100%);
+  }
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Media Queries Z */
+
+.tombol {
+  display: flex;
+}
+.edit,
+.upload,
+.download {
+  width: 200px;
+}
+
+.upload,
+.download {
+  margin-left: 15px;
+}
+
+.upload .uploadBtn {
+  background-color: red;
+  transition: 0.2s;
+}
+
+.upload .uploadBtn:hover {
+  background-color: rgb(221, 0, 0);
+  transition: 0.2s;
+}
+
+.download .downloadBtn {
+  background-color: grey;
+  transition: 0.2s;
+}
+
+.download .downloadBtn:hover {
+  background-color: rgb(105, 105, 105);
+  transition: 0.2s;
+}
+
+#fileInput{
+  display: none;
+}
+

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="icon" type="png" href="/img/logobanyumas - Copy.png" />
+    <title>test</title>
+  </head>
+  <body>
+    <!-- Navbar (start) -->
+    <nav class="navbar" id="navbar">
+      <div class="left-items">
+        <div class="navbar-extra">
+          <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+
+        <div class="banyumas">
+          <img src="img/logobanyumas - Copy.png" alt="Logo Banyumas" />
+        </div>
+        <a href="/" class="navbar-logo">SuratDesa.com</a>
+      </div>
+      <div class="profile">
+        <img src="img/profile.png" alt="Profile Picture" />
+        <span>Username</span>
+      </div>
+
+      <div class="navbar-nav">
+        <a href="/surat-domain" id="permohonan-domain"
+          >Permohonan Penggunaan Domain</a
+        >
+        <a href="/surat-kuasa" id="pemberian-kuasa"
+          >Pemberian Kuasa Mengelola Domain</a
+        >
+        <a href="/surat-ganti-admin" id="permohonan-admin"
+          >Permohonan Pergantian Admin</a
+        >
+        <a href="/surat-tugas" id="perintah-tugas">Perintah Tugas</a>
+      </div>
+    </nav>
+
+    <div class="container">
+        <!-- Container Surat (start) -->
+    <div class="container">
+      
+      <!-- <form method="POST" action="/surat-domain?_method=PUT"> -->
+        <input type="hidden" name="id" value="<%= surat1._id %>">
+        <!-- Surat Domain (start) -->
+        <header>Edit Surat Permohonan Penggunaan Domain</header>
+        <div class="form first">
+          <div class="fields">
+            <div class="input-field">
+              <label>Nomor Surat :</label>
+              <input
+                type="text"
+                class="form-control"
+                required
+                maxlength="50"
+                placeholder="xxx/xxx/xxx"
+                id="noSurat1"
+                name="noSurat"
+                value="<%= surat1.noSurat %>"
+              />
+            </div>
+            <div class="input-field">
+              <label>Jumlah Lampiran :</label>
+              <input 
+                type="text"
+                class="form-control"
+                placeholder="misal : 1"
+                name="lampiran"
+                oninput="restrictToNumbers(this)"
+                value="<%= surat1.lampiran %>"
+                required>
+            </div>
+
+            <div class="input-field">
+              <label>Nama Desa :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Kembaran"
+                required
+                name="namaDesa"
+                value="<%= surat1.namaDesa %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Tanggal :</label>
+              <input
+                type="date"
+                class="form-control"
+                id="tanggalInput"
+                required
+                name="tgl"
+                value="<%= surat1.tgl %>"
+                />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Pengurus Website :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaPengurusWeb"
+                value="<%= surat1.namaPengurusWeb %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Telp HP/WA :</label>
+              <input
+                type="text"
+                maxlength="20"
+                required
+                placeholder="0812xxxx"
+                oninput="restrictToNumbers(this)"
+                name="noHP"
+                value="<%= surat1.noHP %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kepala Desa :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="kadesInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaKades"
+                value="<%= surat1.namaKades %>"
+              />
+            </div>
+          </div>
+
+          <button class="submitBtn" >
+            <span class="btnText">Generate</span>
+          </button>
+        </div>
+      
+    </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <!-- <script>
+      feather.replace();
+    </script>
+    <script src="script.js"></script> -->
+  </body>
+</html>

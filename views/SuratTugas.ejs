@@ -1,0 +1,194 @@
+    <!-- Container Surat (start) -->
+    <div class="container">
+      <form method="POST" action="/surat-tugas">
+        <!-- Surat Tugas -->
+        <header>Surat Perintah Tugas</header>
+        <div class="form fourth" id="surat-tugas">
+          <div class="fields">
+            <div class="input-field">
+              <label>Nomor Surat :</label>
+              <input
+                type="text"
+                required
+                maxlength="50"
+                placeholder="xxx/xxx/xxx"
+                name="noSurat"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Dasar Penugasan :</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Alasan Ditugaskan"
+                name="dsrTugas"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Desa :</label>
+              <input
+                type="text"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Kembaran"
+                required
+                name="namaDesa"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Tanggal Penetapan :</label>
+              <input
+                type="date"
+                id="tanggalInput"
+                placeholder="misal : 31"
+                maxlength="2"
+                required
+                name="tgl"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Yang Ditugaskan :</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaDitugaskan"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>NIAP :</label>
+              <input
+                type="text"
+                maxlength="20"
+                required
+                placeholder="NIAP"
+                oninput="restrictToNumbers(this)"
+                name="niap"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Jabatan :</label>
+              <input
+                type="text"
+                id="kadesInput"
+                required
+                maxlength="50"
+                placeholder="Jabatan"
+                name="jabatan"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama :</label>
+              <input
+                type="text"
+                id="namaInput"
+                maxlength="50"
+                placeholder="Nama Orang Kedua Jika Ada"
+                name="namaDitugaskan2"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>NIAP :</label>
+              <input
+                type="text"
+                maxlength="20"
+                required
+                placeholder="NIAP Orang Kedua Jika Ada"
+                oninput="restrictToNumbers(this)"
+                name="niap2"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Jabatan :</label>
+              <input
+                type="text"
+                id="kadesInput"
+                required
+                maxlength="50"
+                placeholder="Jabatan Orang Kedua Jika Ada"
+                name="jabatan2"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Untuk :</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Tujuan Diperintahkan"
+                name="tujuan"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Untuk :</label>
+              <input
+                type="text"
+                id="namaInput"
+                maxlength="50"
+                placeholder="Tujuan Diperintahkan ke-2"
+                name="tujuan2"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kepala Desa:</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaKades"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kecamatan :</label>
+              <input
+                type="text"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Purwokerto Timur"
+                required
+                name="namaKecamatan"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Alamat :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="alamat"
+                required
+                placeholder="misal: Jl.Desa No.3 Selandaka Kecamatan Sumpuh Kabupaten Banyumas 53195"
+                name="alamat"
+              />
+            </div>
+            <div class="input-field">
+              
+                 </div>
+          </div>
+
+          <button class="submitBtn">
+            <span class="btnText">Generate</span>
+          </button>
+        </div>
+      </form>
+    </div>

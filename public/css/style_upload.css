@@ -1,0 +1,254 @@
+/* Resetting default list styles and removing underline from links */
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2%;
+    background-color: rgb(242, 242, 242);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  .navbar-nav {
+    flex-grow: 1;
+  }
+  /* Navbar Diatas (end) */
+
+  
+  
+  /* Profile Picture end */
+  /* Navbar Logo (start) */
+  .navbar .navbar-logo {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 2px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #000000;
+    font-family: "Nunito", sans-serif;
+    transition: 0.2s;
+
+  }
+  .navbar-logo a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Nunito", sans-serif;
+  }
+  .navbar .navbar-logo:hover {
+    transform: scale(1.01);
+    transition: 0.2s;
+  }
+  
+  .kiri {
+    display: flex;
+  }
+  .banyumas img {
+    display: flex;
+    margin-left: 10px;
+    height: 35px;
+    width: 35px;
+    top: 5px;
+  }
+  /* Navbar Logo (end) */
+  
+  /* Navbar Samping Text (start) */
+  .navbar .navbar-nav a {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    transition: 0.2s;
+    text-decoration: none;
+  }
+  /* Navbar Samping Text (end) */
+  
+  .navbar .navbar-nav a:hover {
+    padding: 10px;
+    transition: 0.2s;
+  }
+  
+  .navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding: 0.2rem;
+    transform: scaleX(0);
+    transition: 0.1s linear;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+  .navbar .navbar-extra a {
+    position: relative;
+    color: rgb(0, 0, 0);
+    margin: 0 0.5rem;
+  }
+  
+  .navbar .navbar-extra a::before,
+  .navbar .navbar-extra a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .navbar .navbar-extra a::before {
+    z-index: -1; /* Place it below the text */
+  }
+  
+  .navbar .navbar-extra a:hover::before,
+  .navbar .navbar-extra a:hover::after {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .navbar .navbar-extra a svg {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    transition: 0.2s;
+  }
+  
+  #hamburger-menu {
+    display: inline-block;
+    size: 100px;
+  }
+  
+  /* Navbar Disamping (start) */
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    background-color: white;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  /* Navbar Disamping (end) */
+  
+  .navbar .navbar-nav.active {
+    left: 0;
+  }
+  
+  /* Navbar Text Disamping (start) */
+  .navbar .navbar-nav a {
+    color: black;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.2rem;
+    font-size: 1.2rem;
+  }
+  
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.6);
+  }
+  
+  .hero {
+    color: #000000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 200px 0;
+  }
+  
+  .hero h1 {
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    padding: 50px 0; /* Apply the Nunito font to the hero heading */
+  }
+  
+  .hero p {
+    font-size: 20px;
+    color: #000000;
+    font-family: "Nunito", sans-serif;
+    padding: 10px 0; /* Apply the Nunito font to the hero paragraph */
+  }
+  
+  input {
+    display: block;
+    margin: auto;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .box {
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    border-radius: 50px;
+  }
+  
+  .upload {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  .hero h1 {
+    font-weight: 500;
+    padding: 30px;
+  }
+  
+  #uploadBtn {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    transition: 0.2s;
+  }
+  
+  #uploadBtn:hover {
+    background-color: #006de2;
+    transition: 0.2s;
+  }
+  #fileInput {
+    margin-top: 10px;
+  }
+  
+  /* Update footer styles */
+  
+  /* Tablet */
+  @media (max-width: 750px) {
+    .container form::-webkit-scrollbar {
+      display: none;
+    }
+    form .fields .input-field {
+      width: calc(100% / 2 - 15px);
+    }
+  }
+  
+  /* Mobile Phone */
+  @media (max-width: 550px) {
+    form .fields .input-field {
+      width: calc(100%);
+    }
+  }
+  

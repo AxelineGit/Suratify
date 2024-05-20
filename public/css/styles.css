@@ -1,0 +1,303 @@
+/* Resetting default list styles and removing underline from links */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-img-1 {
+  background-image: url("/img/pexels-tom-fisk-1555581.jpg");
+}
+.bg-img-2 {
+  background-image: url("/img/pexels-ihsan-adityawarman-2464145.jpg");
+}
+.bg-img-3 {
+  background-image: url("/img/pexels-tom-fisk-2020377.jpg");
+}
+.judul-atas {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  z-index: 9;
+}
+.judul-atas h1 {
+  margin-top: 300px;
+  font-weight: 600;
+}
+.judul-atas .btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: rgba(242, 242, 242, 0.7);
+  color: #000000;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  font-family: "Poppins", sans-serif; /* Apply the Poppins font to the buttons */
+}
+
+.judul-atas .btn:hover {
+  background-color:rgba(242, 242, 242, 0);
+  color: white;
+  transition: 0.2s;
+}
+.carousel-image {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+nav ul {
+  list-style: none;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover::after {
+  transform: scaleX(0);
+}
+
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  padding: 8px 10px; /* Adding some padding to the links for better readability */
+  color: #000;
+  font-size: 15px;
+  font-weight: 500; /* Set the default link color */ /* Add a smooth transition for the underline */
+}
+.nav-links a:hover {
+  color: #000;
+}
+nav a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 1.5px black;
+  transform: scale(0);
+  transition: 0.3s ease;
+  
+}
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Styling the underline on hover */
+
+/* Additional styles for the navigation container */
+.container-nav {
+  background-color: rgba(242, 242, 242, 0.7);
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.kiri {
+  display: flex;
+  align-items: center;
+}
+
+.banyumas img {
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.logo {
+  margin: 0;
+  font-family: "Nunito", sans-serif; /* Apply the Montserrat font to the logo */
+}
+
+/* Update header styles */
+header {
+  background-color: none;
+  color: #000000;
+  padding: 0px;
+}
+
+.navbar-fix {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+.navbar-fix h1 {
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: 700;
+}
+/* Update hero section styles */
+
+.container-fix h1 {
+  font-size: 50px;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+/* Update button styles */
+
+
+.jenis h2 {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+
+.JenisSurat a {
+  text-decoration: none;
+}
+.JenisSurat .container h2 {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.JenisSurat {
+  height: 80vh;
+}
+.JenisSurat .container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 0 100px;
+  padding-bottom: 10px; 
+}
+
+.bulat {
+  display: flex;
+  justify-content: center;
+  border-radius: 100%;
+  margin: 40px 0;
+}
+.box p {
+  margin-top: 10px;
+}
+.box {
+  padding: 10px;
+  width: 250px;
+  height: 50vh;
+  display: flex;
+  border: solid 2px rgb(200, 200, 200);
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 5px 0 rgb(200, 200, 200) ;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+/* Update section heading styles */
+
+section h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500; /* Apply the Montserrat font to section headings */
+}
+.JenisSurat,
+.about,
+.services,
+.contact {
+  padding: 0;  
+  text-align: center;
+}
+
+.judul h2 {
+  margin-top: 50px;
+}
+
+.about .container {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+.tampilan img {
+  height: 350px;
+  width: 100%;
+}
+.about-bawah {
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.i-layanan {
+  display: flex;
+  flex-direction: column;
+}
+.i-layanan a {
+  text-align: left;
+}
+/* Update footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif; /* Apply the Poppins font to the footer */
+}
+
+/* Tablet */
+@media (max-width: 750px) {
+  .container form::-webkit-scrollbar {
+    display: none;
+  }
+  form .fields .input-field {
+    width: calc(100% / 2 - 15px);
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 550px) {
+  form .fields .input-field {
+    width: calc(100%);
+  }
+}

@@ -1,0 +1,36 @@
+      <h2>Arsip Upload Surat <%= judul %></h2>
+      <% if (msg.length !== 0) { %>
+        <div class="alert">
+          <div class="alert alert-success" role="alert">
+            <%= msg %>
+          </div>
+        </div>
+      <% } %>
+      <table>
+        <tr>
+          <th class="nomor" scope="col">No.</th>
+          <th scope="col">Nama File</th>
+          <th class="aksi" scope="col">Aksi</th>
+        </tr>
+        <% surat1.forEach((surat1,i) => {i++ %>
+          <tr class="first">
+            <th scope="row"><%= i++ %></th>
+            <td><%= surat1.name %></td>
+            <td class="action">
+              <form action="/download/<%= jenis %>/<%= surat1._id %>" class="d-inline">
+                <input type="hidden" name="_id" value="<%= surat1._id %>">
+                <button type="submit" onclick="return confirm('Apakah anda ingin mendownload surat ini?');" class="btn-badge">
+                  <i class="fa-solid fa-download"></i>
+                </button>
+              </form>
+              <form action="/upload/<%= jenis %>?_method=DELETE" method="POST" class="d-inline">
+                <input type="hidden" name="_id" value="<%= surat1._id %>">
+                <input type="hidden" name="path" value="<%= surat1.path %>">
+                <button type="submit" onclick="return confirm('Apakah anda ingin menghapus?');" class="btn-badge">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </table>

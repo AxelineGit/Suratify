@@ -1,0 +1,99 @@
+
+    <!-- Container Surat (start) -->
+    <div class="container">
+      <form method="POST" action="/surat-kuasa">
+        <!-- Surat Kuasa (start) -->
+        <header>Surat Pemberian Kuasa Mengelola Domain</header>
+        <div class="form second" id="surat-kuasa">
+          <div class="fields">
+            <div class="input-field">
+              <label>Nomor Surat :</label>
+              <input
+                type="text"
+                required
+                maxlength="50"
+                placeholder="xxx/xxx/xxx"
+                name="noSurat"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kepala Desa :</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaKades"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>NIK :</label>
+              <input
+                type="text"
+                maxlength="20"
+                required
+                placeholder="NIK"
+                oninput="restrictToNumbers(this)"
+                name="nik"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Desa :</label>
+              <input
+                type="text"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Kembaran"
+                required
+                name="namaDesa"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kecamatan :</label>
+              <input
+                type="text"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Purwokerto Timur"
+                required
+                name="namaKecamatan"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Tanggal :</label>
+              <input
+                type="date"
+                id="tanggalInput"
+                placeholder="misal : 31"
+                maxlength="2"
+                required
+                name="tgl"
+              />
+            </div>
+            
+            <div class="input-field">
+              <label>Alamat :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="alamat"
+                required
+                placeholder="misal: Jl.Desa No.3 Selandaka Kecamatan Sumpuh Kabupaten Banyumas 53195"
+                name="alamat"
+              />
+            </div>
+
+            <div class="input-field"></div>
+          </div>
+          <button class="submitBtn">
+            <span class="btnText">Generate</span>
+          </button>
+        </div>
+      </form>
+    </div>

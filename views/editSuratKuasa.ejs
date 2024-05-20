@@ -1,0 +1,119 @@
+
+    <!-- Container Surat (start) -->
+    <div class="container">
+      <form method="POST" action="/surat-kuasa/?_method=PUT">
+        <input type="hidden" name="_id" value="<%= surat1._id %>">
+        <!-- Surat Kuasa (start) -->
+        <header>Surat Pemberian Kuasa Mengelola Domain</header>
+        <div class="form second" id="surat-kuasa">
+          <div class="fields">
+            <div class="input-field">
+              <label>Nomor Surat :</label>
+              <input
+                type="text"
+                required
+                maxlength="50"
+                placeholder="xxx/xxx/xxx"
+                name="noSurat"
+                value="<%= surat1.noSurat %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kepala Desa :</label>
+              <input
+                type="text"
+                id="namaInput"
+                required
+                maxlength="50"
+                placeholder="Nama Lengkap"
+                name="namaKades"
+                value="<%= surat1.namaKades %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>NIK :</label>
+              <input
+                type="text"
+                maxlength="20"
+                required
+                placeholder="NIK"
+                oninput="restrictToNumbers(this)"
+                name="nik"
+                value="<%= surat1.nik %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Desa :</label>
+              <input
+                type="text"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Kembaran"
+                required
+                name="namaDesa"
+                value="<%= surat1.namaDesa %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Nama Kecamatan :</label>
+              <input
+                type="text"
+                id="desaInput"
+                maxlength="20"
+                placeholder="misal : Purwokerto Timur"
+                required
+                name="namaKecamatan"
+                value="<%= surat1.namaKecamatan %>"
+              />
+            </div>
+            
+            
+
+            <div class="input-field">
+              <label>Tanggal :</label>
+              <input
+                type="date"
+                id="tanggalInput"
+                placeholder="misal : 31"
+                maxlength="2"
+                required
+                name="tgl"
+                value="<%= surat1.tgl %>"
+              />
+            </div>
+
+            <div class="input-field">
+              <label>Alamat :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="alamat"
+                required
+                placeholder="misal: Jl.Desa No.3 Selandaka Kecamatan Sumpuh Kabupaten Banyumas 53195"
+                name="alamat"
+                value="<%= surat1.alamat %>"
+              />
+            </div>
+
+            </div>
+            <div class="tombol">
+              <div class="edit">
+                <button class="submitBtn">
+                <span class="btnText">Edit</span>
+              </button>
+              </div>
+              </form>
+              <div class="upload">
+                <form action="/upload/surat-kuasa" method="get">
+                <button class="uploadBtn" id="uploadBtn">
+                  <span class="btnText">Upload</span>
+                </button>
+              </form>
+              </div>
+            </div>
+        </div>
+    </div>
