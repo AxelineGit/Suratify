@@ -1019,5 +1019,5 @@ app.delete('/upload/surat-tugas', (req,res) =>{
 });
 
 app.listen(port, () => {
-    console.log(`Suratdesa.com | listening at http://localhost:${port}`);
+    console.log(`Suratify | listening at http://localhost:${port}`);
 });

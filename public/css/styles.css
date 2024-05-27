@@ -142,6 +142,13 @@ nav a:hover::after {
   margin-top: 5px;
   margin-right: 10px;
 }
+.github img {
+  margin-left: 10px;
+  height: 100px;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
 
 .logo {
   margin: 0;
